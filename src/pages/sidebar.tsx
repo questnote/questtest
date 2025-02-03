@@ -1,5 +1,5 @@
-import React from 'react';
-import { List, ListItem, ListItemText, Typography, Box } from '@mui/material';
+import { List, ListItemText, Typography, Box, ListItemButton } from '@mui/material';
+import ListItem from '@mui/material/ListItem';
 
 const Sidebar = () => {
     return (
@@ -18,8 +18,10 @@ const Sidebar = () => {
             <List>
                 {['Praxis', 'Open Canvas', 'Search Spaces', 'Test', 'Settings', 'Report Bug', 'Help', 'Refer a Friend', 'Exit to Home'].map(
                     (text, index) => (
-                        <ListItem button key={index}>
-                            <ListItemText primary={text} />
+                        <ListItem key={index} disablePadding>
+                            <ListItemButton>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
                         </ListItem>
                     )
                 )}

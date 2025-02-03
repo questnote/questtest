@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 import Sidebar from './pages/sidebar';
-import { Box, Typography, Stack, Button, CardContent, CardActionArea, Card } from '@mui/material';
+import { Box, Typography, Stack} from '@mui/material';
 
 
 const App = () => {
