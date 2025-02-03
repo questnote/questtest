@@ -1,35 +1,90 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Sidebar from './pages/sidebar';
+import { Box, Typography, Stack, Button, CardContent, CardActionArea, Card } from '@mui/material';
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    
+  
+    <div className="cards">
 
-export default App
+    
+      
+
+          <Box display="flex" height="100vh">
+            <Sidebar />
+            <Box flex={1} display="flex" justifyContent="center" alignItems="flex-start" p={3}>
+                <Box>
+                    <Typography variant="h4" gutterBottom align="center">
+                        Good Afternoon, ProxyYt
+                    </Typography>
+                    <Stack spacing={2} alignItems="center" mt={4}>
+                    <div className="cards">
+                    <button className="card">Teach me about the Quadratic Formula</button>
+                    <button className="card">Graph the Derivative of f(x) = x²</button>
+                    <button className="card">Explain the structure of a plant cell</button>
+                </div>
+                    </Stack>
+                </Box>
+            </Box>
+        </Box>
+
+        
+      {/* <Box display="flex" height="100vh">
+            <Sidebar />
+            <Box flex={1} p={3}>
+                <Typography variant="h4" gutterBottom>
+                    Good Afternoon, ProxyYt
+                </Typography>
+                <Stack spacing={2} direction="column" alignItems="start">
+                    <Button
+                        className="card"
+                        variant="outlined"
+                    >
+                        Teach me about the Quadratic Formula
+                    </Button>
+                    <Button
+                        className="card"
+                        variant="outlined"
+                    >
+                        Graph the Derivative of f(x) = x²
+                    </Button>
+                    <Button
+                        className="card"
+                        variant="outlined"
+                    >
+                        Explain the structure of a plant cell
+                    </Button>
+                </Stack>
+            </Box>
+        </Box>
+       */}
+
+      {/* <div className="app">
+            <Sidebar />
+            <Box flex={1} display="flex" justifyContent="center" alignItems="flex-start" p={3}>
+
+            <div className="content">
+                <h1>Good Afternoon, ProxyYt</h1>
+                <Stack spacing={2} alignItems="center" mt={4}>
+
+                <div className="cards">
+                    <button className="card">Teach me about the Quadratic Formula</button>
+                    <button className="card">Graph the Derivative of f(x) = x²</button>
+                    <button className="card">Explain the structure of a plant cell</button>
+                </div>
+                </Stack>
+            </div>
+            </Box>
+        </div> */}
+
+        
+    </div>
+
+
+    
+  );
+};
+
+export default App;
